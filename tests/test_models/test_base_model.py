@@ -35,7 +35,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertNotEqual(b1.id, b2.id)
 
     def test_created_at(self):
-        """Tests the created_at 
+        """Tests the created_at
         attribute of the BaseModel instance"""
         b1 = BaseModel()
         b2 = BaseModel()

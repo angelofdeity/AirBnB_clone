@@ -2,6 +2,7 @@ import unittest
 from models.review import Review
 from models.base_model import BaseModel
 
+
 class TestReview(unittest.TestCase):
     def setUp(self):
         self.review = Review()
@@ -18,6 +19,7 @@ class TestReview(unittest.TestCase):
         self.assertEqual(self.review.place_id, "1")
         self.assertEqual(self.review.user_id, "2")
         self.assertEqual(self.review.text, "This is a great place!")
+
 
 if __name__ == '__main__':
     unittest.main()

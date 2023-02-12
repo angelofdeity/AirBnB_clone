@@ -32,14 +32,16 @@ class TestUser(unittest.TestCase):
         """Tests pep8 conformance"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/user.py'])
-        self.assertEqual(result.total_errors, 0, "Found code style errors (and warnings).")
+        self.\
+            assertEqual(result.total_errors, 0, "Found style errors warnings.")
 
     def test_docstrings(self):
         """Tests docstrings"""
         self.assertGreater(len(User.__doc__), 0)
         for method in dir(User):
             if eval("User.{}.__doc__".format(method)) is not None:
-                self.assertGreater(len(eval("User.{}.__doc__".format(method))), 0)
+                self.\
+                    assertGreater(len(eval("User.{}.__doc__".format(method))), 0)
 
     def test_init_and_class_vars(self):
         """Tests __init__ and class variables"""
@@ -56,7 +58,8 @@ class TestUser(unittest.TestCase):
     def test_save(self):
         """Tests the save method"""
         self.test_user.save()
-        self.assertNotEqual(self.test_user.created_at, self.test_user.updated_at)
+        self.\
+            assertNotEqual(self.test_user.created_at, self.test_user.updated_at)
 
     def test_str_types(self):
         """Tests the types of email, password, first_name, and last_name"""
@@ -65,6 +68,6 @@ class TestUser(unittest.TestCase):
         self.assertIsInstance(self.test_user.first_name, str)
         self.assertIsInstance(self.test_user.last_name, str)
 
-   
+
 if __name__ == '__main__':
     unittest.main()

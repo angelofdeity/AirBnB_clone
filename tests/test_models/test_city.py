@@ -25,7 +25,7 @@ class TestCity(unittest.TestCase):
             os.remove("file.json")
         except FileNotFoundError:
             pass
-        
+
     def test_docstrings_city(self):
         """tests docstrings"""
         self.assertTrue(len(City.__doc__) > 0)

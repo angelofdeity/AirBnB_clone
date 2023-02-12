@@ -3,6 +3,7 @@ import os
 from models.city import City
 from models.base_model import BaseModel
 
+
 class TestCity(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -36,6 +37,7 @@ class TestCity(unittest.TestCase):
 
     def test_to_dict(self):
         self.assertEqual('to_dict' in dir(self.testCity), True)
+
 
 if __name__ == '__main__':
     unittest.main()

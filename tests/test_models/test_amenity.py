@@ -25,7 +25,7 @@ class TestAmenity(unittest.TestCase):
         """teardown"""
         try:
             os.remove("file.json")
-        except:
+        except FileNotFoundError:
             pass
 
     def test_attr_Amen(self):

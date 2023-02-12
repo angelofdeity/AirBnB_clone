@@ -25,7 +25,7 @@ class TestState(unittest.TestCase):
         """teardown"""
         try:
             os.remove("file.json")
-        except:
+        except FileNotFoundError:
             pass
 
     def test_docstring_stat(self):
